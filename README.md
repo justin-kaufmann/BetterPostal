@@ -92,38 +92,10 @@ The legacy `/prv3` slash-command alias is also retained for existing macros.
 | Delete empty mail | Optionally delete messages after their contents have been collected, if allowed by WoW. |
 | Language | Automatic, English, or German. |
 
-## Project layout
-
-```text
-BetterPostal/
-├── Assets/              # First/last page button textures
-├── Core/Bootstrap.lua   # Defaults, namespace, localization helpers
-├── Libs/                # Bundled support libraries
-├── Mail/
-│   ├── Actions.lua      # Single-message actions and guarded C.O.D./delete flows
-│   ├── Processor.lua    # Collection engine, filters, progress and resume
-│   ├── Selection.lua    # Message selection and selection controls
-│   └── Setup.lua        # Mailbox layout and UI hooks
-├── UI/
-│   ├── MailFrame.lua    # Mail frame integration and localization
-│   ├── Minimap.lua      # Settings/minimap access
-│   ├── Navigation.lua   # Page jumps and main-button integration
-│   └── Settings.lua     # Settings dashboard
-├── Events.lua           # Lifecycle, events, slash commands
-├── localize.lua         # English and German strings
-└── BetterPostal.toc     # Addon metadata and load order
-```
-
-## Versioning
-
-The release version is defined in `BetterPostal.toc` by the `## Version:` metadata line. The settings panel reads that metadata and displays it automatically; normally, you do **not** need to hard-code the version in `UI/Settings.lua`.
-
 ## Known limitations
 
 - Collection is subject to the mailbox state, bag space, server responses, and what the WoW client/API permits.
-- Automatic resume can only restore a message selection when a message can be identified safely.
-- This project should be tested in-game with representative mail types before relying on bulk collection for important mail.
-
+  
 ## Contributing and feedback
 
 Bug reports and feature requests are welcome. Include the WoW version, BetterPostal version, steps to reproduce, relevant error messages, and whether mail filters or manual selections were enabled.
@@ -217,37 +189,9 @@ Der ältere Slash-Befehl `/prv3` bleibt aus Kompatibilitätsgründen für besteh
 | Leere Briefe löschen | Löscht optional leere Briefe nach dem Einsammeln, sofern WoW dies erlaubt. |
 | Sprache | Automatisch, Deutsch oder Englisch. |
 
-## Projektstruktur
-
-```text
-BetterPostal/
-├── Assets/              # Grafiken für Erste-/Letzte-Seite-Buttons
-├── Core/Bootstrap.lua   # Standardwerte, Namespace, Lokalisierungshilfen
-├── Libs/                # Mitgelieferte Bibliotheken
-├── Mail/
-│   ├── Actions.lua      # Einzelaktionen und abgesicherte Nachnahme-/Löschabläufe
-│   ├── Processor.lua    # Sammel-Engine, Filter, Fortschritt und Fortsetzung
-│   ├── Selection.lua    # Nachrichtenauswahl und Auswahlsteuerung
-│   └── Setup.lua        # Postfachlayout und UI-Anbindung
-├── UI/
-│   ├── MailFrame.lua    # Postfachintegration und Lokalisierung
-│   ├── Minimap.lua      # Zugriff über Einstellungen/Minimap
-│   ├── Navigation.lua   # Seitensprünge und Hauptbutton-Anbindung
-│   └── Settings.lua     # Einstellungs-Dashboard
-├── Events.lua           # AddOn-Lebenszyklus, Events und Slash-Befehle
-├── localize.lua         # Deutsche und englische Texte
-└── BetterPostal.toc     # AddOn-Metadaten und Ladereihenfolge
-```
-
-## Version einstellen
-
-Die Versionsnummer wird in `BetterPostal.toc` über die Metadatenzeile `## Version:` festgelegt. Das Einstellungsfenster liest diesen Wert automatisch aus und zeigt ihn an. Normalerweise muss die Version **nicht zusätzlich in `UI/Settings.lua` fest eingetragen** werden.
-
 ## Bekannte Einschränkungen
 
 - Das Einsammeln hängt vom Postfachzustand, freien Taschenplätzen, Serverantworten und den Möglichkeiten der WoW-API ab.
-- Eine gespeicherte manuelle Auswahl kann nur dann wiederhergestellt werden, wenn sich der betreffende Brief sicher identifizieren lässt.
-- Teste das AddOn vor dem Einsatz bei wichtigen Briefen mit unterschiedlichen Nachrichtentypen direkt im Spiel.
 
 ## Mitwirken und Fehler melden
 
