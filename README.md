@@ -3,10 +3,6 @@
 **Smarter mailbox addon for World of Warcraft.**  
 **Intelligentes Post-Addon für World Of Warcraft Retail (Midnight)**
 
-> **Version / Version:** 1.0.0  
-> **Languages / Sprachen:** English · Deutsch  
-> **Game interface / Spielversion:** Retail interface version declared in the addon's `.toc` file.
-
 ---
 
 # English
